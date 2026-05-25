@@ -13,6 +13,7 @@ const projects = [
     desc: "Mengelola dan menyusun data kegiatan menjadi laporan yang rapi, terstruktur, dan mudah dipahami.",
     tools: ["Excel", "Google Sheets"],
     pink: false,
+    image: "/images/foto0.jpeg",
   },
   {
     title: "Laporan & Dashboard Data",
@@ -20,7 +21,8 @@ const projects = [
     year: "2025",
     desc: "Menyusun data menjadi laporan dan dashboard sederhana untuk mempermudah analisis dan monitoring.",
     tools: ["Excel", "Google Sheets"],
-    pink: true,
+    pink: false,
+    image: "/images/foto00.jpeg",
   },
   {
     title: "Administrasi Data Perjalanan",
@@ -29,6 +31,7 @@ const projects = [
     desc: "Mengelola data perjalanan dan menyusunnya menjadi laporan yang sistematis dan mudah diakses.",
     tools: ["Excel", "Microsoft Word"],
     pink: false,
+    image: "/images/foto2.jpeg",
   },
   {
     title: "Pengolahan Data Personal",
@@ -37,6 +40,7 @@ const projects = [
     desc: "Mengelola data personal atau sederhana menjadi informasi yang terstruktur dan mudah digunakan.",
     tools: ["Excel", "Google Sheets"],
     pink: false,
+    image: "/images/foto3.jpeg",
   },
   {
     title: "Sistem Pengarsipan Data",
@@ -44,15 +48,17 @@ const projects = [
     year: "2025",
     desc: "Menyusun dan mengelola arsip digital agar data tersimpan rapi dan mudah ditemukan kembali.",
     tools: ["Google Drive", "Microsoft Word"],
-    pink: true,
+    pink: false,
+    image: "/images/foto4.jpeg",
   },
   {
     title: "Data Laporan Kegiatan",
     tag: "Data Reporting",
     year: "2025",
-    desc: "Membuat laporan kegiatan berdasarkan data yang telah diolah secara sistematis dan informatif",
+    desc: "Membuat laporan kegiatan berdasarkan data yang telah diolah secara sistematis dan informatif.",
     tools: ["Excel", "PowerPoint"],
     pink: false,
+    image: "/images/foto5.jpeg",
   },
 ];
 
@@ -107,100 +113,117 @@ export default function page() {
       </section>
 
       {/* ── PROJECTS GRID ── */}
-      <section className="py-10 pb-24 px-6" style={{ background: "#ffffff" }}>
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project) => (
+     <section className="py-10 pb-24 px-6" style={{ background: "#ffffff" }}>
+  <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {projects.map((project) => (
+      <div
+        key={project.title}
+        className="relative overflow-hidden rounded-3xl transition-all duration-500 hover:-translate-y-2 group cursor-pointer"
+        style={{
+          border: "1.5px solid rgba(255,112,191,0.15)",
+          boxShadow: "0 8px 30px rgba(255,112,191,0.08)",
+          minHeight: "420px",
+        }}
+      >
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+          style={{
+            backgroundImage: `url(${project.image})`,
+          }}
+        />
+
+        {/* Overlay */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background: project.pink
+              ? "rgba(255,112,191,0.82)"
+              : "rgba(0,0,0,0.58)",
+          }}
+        />
+
+        {/* Content */}
+        <div className="relative z-10 p-6 flex flex-col h-full">
+          
+          {/* Top */}
+          <div className="flex items-start justify-between mb-6">
             <div
-              key={project.title}
-              className="rounded-3xl overflow-hidden transition-all duration-300 hover:-translate-y-1 group cursor-pointer"
+              className="px-3 py-1 rounded-full text-xs font-bold"
               style={{
-                background: project.pink ? "#FF70BF" : "#fff",
-                border: project.pink ? "none" : "1.5px solid rgba(255,112,191,0.2)",
-                boxShadow: project.pink
-                  ? "0 8px 40px rgba(255,112,191,0.3)"
-                  : "0 4px 20px rgba(255,112,191,0.06)",
+                background: "rgba(255,255,255,0.18)",
+                color: "#fff",
+                border: "1px solid rgba(255,255,255,0.25)",
+                backdropFilter: "blur(4px)",
               }}
             >
-              {/* Thumbnail */}
-              <div
-                className="h-44 flex items-center justify-center relative overflow-hidden"
-                style={{
-                  background: project.pink
-                    ? "rgba(255,255,255,0.15)"
-                    : "linear-gradient(135deg, #ffe8f5, rgba(255,112,191,0.2))",
-                }}
-              >
-                <span
-                  className="text-7xl opacity-20 group-hover:scale-110 transition-transform duration-500 select-none"
-                  style={{ color: project.pink ? "#fff" : "#FF70BF" }}
-                >
-                  ✦
-                </span>
-                {/* Tag */}
-                <div
-                  className="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold"
-                  style={{
-                    background: project.pink ? "#fff" : "#FF70BF",
-                    color: project.pink ? "#FF70BF" : "#fff",
-                  }}
-                >
-                  {project.tag}
-                </div>
-                <div
-                  className="absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-semibold"
-                  style={{
-                    background: project.pink ? "rgba(255,255,255,0.2)" : "rgba(255,112,191,0.1)",
-                    color: project.pink ? "#fff" : "#FF70BF",
-                  }}
-                >
-                  {project.year}
-                </div>
-              </div>
-
-              {/* Content */}
-              <div className="p-6">
-                <h3
-                  className="font-black text-lg mb-2"
-                  style={{ color: project.pink ? "#fff" : "#1a1a1a" }}
-                >
-                  {project.title}
-                </h3>
-                <p
-                  className="text-sm leading-relaxed mb-4"
-                  style={{ color: project.pink ? "rgba(255,255,255,0.8)" : "#999" }}
-                >
-                  {project.desc}
-                </p>
-                <div className="flex items-center justify-between">
-                  <div className="flex gap-2 flex-wrap">
-                    {project.tools.map((tool) => (
-                      <span
-                        key={tool}
-                        className="px-2.5 py-1 rounded-full text-xs font-semibold"
-                        style={{
-                          background: project.pink ? "rgba(255,255,255,0.2)" : "rgba(255,112,191,0.08)",
-                          color: project.pink ? "#fff" : "#FF70BF",
-                        }}
-                      >
-                        {tool}
-                      </span>
-                    ))}
-                  </div>
-                  <div
-                    className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 ml-2"
-                    style={{
-                      background: project.pink ? "#fff" : "#FF70BF",
-                      color: project.pink ? "#FF70BF" : "#fff",
-                    }}
-                  >
-                    →
-                  </div>
-                </div>
-              </div>
+              {project.tag}
             </div>
-          ))}
+
+            <div
+              className="px-3 py-1 rounded-full text-xs font-semibold"
+              style={{
+                background: "rgba(255,255,255,0.12)",
+                color: "#fff",
+              }}
+            >
+              {project.year}
+            </div>
+          </div>
+
+          {/* Spacer */}
+          <div className="flex-1" />
+
+          {/* Bottom Content */}
+          <div>
+            <h3
+              className="font-black text-2xl mb-3"
+              style={{ color: "#fff" }}
+            >
+              {project.title}
+            </h3>
+
+            <p
+              className="text-sm leading-relaxed mb-5"
+              style={{ color: "rgba(255,255,255,0.85)" }}
+            >
+              {project.desc}
+            </p>
+
+            {/* Tools */}
+            <div className="flex flex-wrap gap-2 mb-6">
+              {project.tools.map((tool) => (
+                <span
+                  key={tool}
+                  className="px-3 py-1 rounded-full text-xs font-semibold"
+                  style={{
+                    background: "rgba(255,255,255,0.16)",
+                    color: "#fff",
+                    border: "1px solid rgba(255,255,255,0.2)",
+                    backdropFilter: "blur(4px)",
+                  }}
+                >
+                  {tool}
+                </span>
+              ))}
+            </div>
+
+            {/* Button */}
+            <div
+              className="w-11 h-11 rounded-full flex items-center justify-center"
+              style={{
+                background: "#fff",
+                color: "#FF70BF",
+              }}
+            >
+              →
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
+    ))}
+  </div>
+</section>
 
       {/* ── CTA ── */}
       <section className="py-20 px-6" style={{ background: "#ffffff" }}>

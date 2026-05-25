@@ -66,7 +66,7 @@ export default function page() {
                 <strong style={{ color: "#FF70BF" }}>Pengolahan Data, Administrasi,</strong>{" "}
                 &amp;{" "}
                 <strong style={{ color: "#FF70BF" }}>Pelaporan Informasi</strong>.
-                Terbiasa bekerja dengan data secara terstruktur, teliti, dan rapi. Memiliki kemampuan dalam mengelola data, membuat laporan, serta mendukung operasional administrasi berbasis teknologi informasi.
+                Terbiasa bekerja secara terstruktur, teliti, serta mampu mengelola data dan menyusun laporan berbasis teknologi informasi.
               </p>
 
               <div className="flex flex-wrap gap-4">
@@ -113,7 +113,7 @@ export default function page() {
 
             {/* Avatar */}
             <div className="order-1 md:order-2 flex justify-center md:justify-end">
-              <div className="relative w-96 h-96 md:w-[420px] md:h-[420px]">
+              <div className="relative w-72 h-72 md:w-[420px] md:h-[420px]">
                 <div
                   className="absolute inset-0 rounded-full border-2 border-dashed animate-spin"
                   style={{
@@ -139,7 +139,7 @@ export default function page() {
   }}
 >
   <Image
-    src="/foto-rizka.jpeg"
+    src="/foto-ika.jpeg"
     alt="Foto saya"
     fill
     className="object-cover"
@@ -196,7 +196,7 @@ export default function page() {
               — ABOUT ME
             </p>
             <h2
-              className="text-4xl md:text-5xl font-black mb-6"
+              className="text-3xl md:text-4xl font-black mb-6"
               style={{ letterSpacing: "-1.5px", color: "#1a1a1a" }}
             >
               Saya suka mengolah data dan menyajikannya secara{" "}

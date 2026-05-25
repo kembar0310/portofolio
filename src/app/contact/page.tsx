@@ -9,30 +9,30 @@ const contactInfo = [
   {
     icon: "✉",
     label: "Email",
-    value: "rizka@email.com",
+    value: "ikamallisa@email.com",
     desc: "Balas dalam 1x24 jam",
   },
   {
     icon: "💼",
     label: "LinkedIn",
-    value: "linkedin.com/in/rizkaupa",
+    value: "linkedin.com/in/rizkaupamallisa",
     desc: "Connect with me",
   },
   {
     icon: "🎨",
-    label: "Dribbble",
-    value: "dribbble.com/rizkaupa",
+    label: "Canva",
+    value: "canva.com/rizkaupamallisa",
     desc: "Lihat karya desain saya",
   },
   {
     icon: "⌨",
     label: "GitHub",
-    value: "github.com/rizkaupa",
+    value: "github.com/rizkaupamallisa",
     desc: "Cek kode saya",
   },
 ];
 
-const services = ["UI/UX Design", "Frontend Development", "Design System", "Landing Page", "Konsultasi", "Lainnya"];
+const services = ["Data Management", "Data Reporting", "Administrative Support", "Document Management", "Konsultasi Data", "Lainnya"];
 
 export default function page() {
   const [form, setForm] = useState({
@@ -89,15 +89,14 @@ export default function page() {
             — GET IN TOUCH
           </p>
           <h1
-            className="text-5xl md:text-7xl font-black mb-6"
+            className="text-4xl md:text-5xl font-black mb-6"
             style={{ letterSpacing: "-3px", color: "#1a1a1a", lineHeight: 1.05 }}
           >
-            Mari Bekerja<br />
-            <span style={{ color: "#FF70BF" }}>Sama ✦</span>
+            Mari Kelola Data<br />
+            <span style={{ color: "#FF70BF" }}>Bersama ✦</span>
           </h1>
           <p className="text-xl max-w-lg leading-relaxed" style={{ color: "#888" }}>
-            Punya ide proyek menarik? Butuh bantuan desain atau development?
-            Saya siap mendengarkan dan membantu!
+            Punya data yang perlu diolah atau disusun? Saya siap membantu mengelola dan menyajikan data menjadi informasi yang rapi, jelas, dan mudah dipahami.
           </p>
         </div>
       </section>
@@ -151,12 +150,11 @@ export default function page() {
             >
               <div className="flex items-center gap-3 mb-3">
                 <span className="w-3 h-3 rounded-full bg-white/50 inline-block" />
-                <span className="text-sm font-black text-white">Status Sekarang</span>
+                <span className="text-sm font-black text-white">Status Saat Ini</span>
               </div>
-              <p className="text-2xl font-black text-white mb-2">Tersedia ✦</p>
+              <p className="text-2xl font-black text-white mb-2">Siap Bekerja ✦</p>
               <p className="text-sm text-white/80 leading-relaxed">
-                Saya sedang terbuka untuk proyek freelance, internship, maupun
-                kolaborasi jangka panjang. Response time: &lt; 24 jam.
+                Saya terbuka untuk posisi internship maupun pekerjaan di bidang pengolahan data dan administrasi. Siap membantu dalam pengelolaan data, penyusunan laporan, dan administrasi berbasis sistem. Respon &lt; 24 jam.
               </p>
             </div>
           </div>
@@ -284,7 +282,7 @@ export default function page() {
                     name="message"
                     required
                     rows={5}
-                    placeholder="Halo Rizka, saya ingin mendiskusikan proyek..."
+                    placeholder="Halo Rizka, saya ingin bantuan dalam pengolahan atau penyusunan data..."
                     value={form.message}
                     onChange={handleChange}
                     className="w-full rounded-2xl px-4 py-3 text-sm outline-none resize-none"
@@ -306,7 +304,7 @@ export default function page() {
                     boxShadow: "0 6px 24px rgba(255,112,191,0.4)",
                   }}
                 >
-                  Kirim Pesan ✦
+                  Kirim Permintaan ✦
                 </button>
               </form>
             )}
