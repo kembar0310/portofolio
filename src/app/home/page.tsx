@@ -217,7 +217,7 @@ export default function page() {
             </Link>
           </div>
           <div className="flex flex-wrap gap-3">
-            {["Figma", "Next.js", "Tailwind CSS", "React", "TypeScript", "Framer Motion"].map((tag) => (
+            {["Microsoft Excel", "Google Sheets", "Microsoft Word", "Microsoft PowerPoint", "Data Entry", "Data Reporting", "Document Management"].map((tag) => (
               <span
                 key={tag}
                 className="px-4 py-2 rounded-full text-sm font-semibold"

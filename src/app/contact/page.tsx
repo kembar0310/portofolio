@@ -9,7 +9,7 @@ const contactInfo = [
   {
     icon: "✉",
     label: "Email",
-    value: "ikamallisa@email.com",
+    value: "ikamallisa226@email.com",
     desc: "Balas dalam 1x24 jam",
   },
   {
