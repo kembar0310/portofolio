@@ -90,7 +90,7 @@ export default function page() {
               </div>
               <div>
                 <h3 className="font-black text-lg" style={{ color: "#1a1a1a" }}>Rizka Upa Mallisa</h3>
-                <p className="text-sm" style={{ color: "#aaa" }}>Frontend Dev & UI/UX Designer</p>
+                <p className="text-sm" style={{ color: "#aaa" }}>Data Management & Administrative</p>
                 <div className="flex items-center gap-2 mt-1">
                   <span className="w-2 h-2 rounded-full bg-green-400 inline-block" />
                   <span className="text-xs font-semibold" style={{ color: "#FF70BF" }}>Open to Work</span>

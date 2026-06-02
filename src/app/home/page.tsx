@@ -178,10 +178,9 @@ export default function page() {
           className="inline-block text-sm font-bold tracking-widest text-white"
           style={{ animation: "marquee 20s linear infinite" }}
         >
-          &nbsp;✦ UI/UX DESIGN &nbsp;✦ FRONTEND DEVELOPMENT &nbsp;✦ FIGMA
-          &nbsp;✦ NEXT.JS &nbsp;✦ TAILWIND CSS &nbsp;✦ REACT &nbsp;✦ DESIGN
-          SYSTEM &nbsp;✦ CREATIVE CODING &nbsp;✦ UI/UX DESIGN &nbsp;✦ FRONTEND
-          DEVELOPMENT &nbsp;✦ FIGMA &nbsp;✦ NEXT.JS &nbsp;
+          &nbsp;✦ DATA MANAGEMENT &nbsp;✦ DATA REPORTING &nbsp;✦ ADMINISTRATIVE SUPPORT
+          &nbsp;✦ DOCUMENT MANAGEMENT &nbsp;✦ DATA PROCESSING &nbsp;✦ MICROSOFT EXCEL &nbsp;✦ GOOGLE SHEETS
+          &nbsp;✦ INFORMATION MANAGEMENT &nbsp;
         </span>
         <style>{`@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }`}</style>
       </div>
